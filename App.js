@@ -15,15 +15,17 @@ export default function App() {
 
        <SafeAreaView style={styles.container}>
 
-              <View style={styles.box}> 
+              <View style={styles.Top}> 
 
                 <CustomFlatlist Data ={data} />
 
               </View>
 
-              {/* <View style={styles.box2}>
+              <View style={styles.bottom}> 
 
-              </View> */}
+                <CustomFlatlist Data ={data} />
+
+              </View>
 
        </SafeAreaView>
    
@@ -36,14 +38,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#f3f4f8",
     // alignItems: 'center',
     // justifyContent: 'center',
-    flexDirection:"row",
+    flexDirection:"column",
     paddingVertical:20,
     paddingHorizontal:10,
   },
 
-  box:{
+  Top:{
     display:"flex",
-    flex:1,
+    flex:0.5,
+  },
+  bottom:{
+    display:"flex",
+    flex:0.5,
   },
 
   box1:{
